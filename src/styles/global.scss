@@ -1,0 +1,34 @@
+@import './variables';
+@import './fonts';
+
+html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: var(--bg-primary);
+    font-family: 'Lufga', Arial, sans-serif;
+    color: var(--font-primary);
+    height: 100%;
+    position: relative;
+    width: 100%;
+    p, div, span, h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100%;
+        padding: 0 50px;
+        & > * {
+            max-width: calc(100vw - 100px);
+        }
+      }
+      tr:hover {
+        cursor: pointer;
+      }
+}
+.modal .card {
+    padding: 10px 12px;
+}

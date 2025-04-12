@@ -1,0 +1,78 @@
+.button {
+    --button-primary-bg: var(--burjx-green);
+    --button-primary-bg-hover: #CDFF00E6;
+
+    --button-secondary-bg: var(--card-bg);
+    --button-secondary-bg-hover: #2B2B2B80;
+
+    --button-tertiary-color: var(--burjx-grey);
+    --button-tertiary-color-hover: black;
+    --button-tertiary-bg: transparent;
+    --button-tertiary-bg-hover: var(--burjx-green);
+
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 8px;
+    border-radius: 24px;
+    .icon:first-child:not(:only-child) {
+        margin-right: 12px;
+    }
+    .icon:last-child:not(:only-child) {
+        margin-left: 12px;
+    }
+    &:not(:disabled) {
+        cursor: pointer;
+    }
+    &.primary {
+        color: black;
+        background-color: var(--button-primary-bg);
+        padding: 12px 32px;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        &:is(:hover, :focus) {
+            background-color: var(--button-primary-bg-hover);
+        }
+    }
+    &.secondary {
+        color: white;
+        padding: 14px 12px;
+        background-color: var(--button-secondary-bg);
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+        border: 1px solid var(--border-color);
+        &:is(:hover, :focus) {
+            background-color: var(--button-secondary-bg-hover);
+        }
+    }
+    &.tertiary {
+        color: var(--button-tertiary-color);
+        background-color: var(--button-tertiary-bg);
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        padding: 4px 8px;
+        border-color: transparent;
+        &.selected, &:is(:hover, :focus) {
+            color: var(--button-tertiary-color-hover);
+            background-color: var(--button-tertiary-bg-hover);
+        }
+    }
+    &.icon {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        padding: 8px 12px;
+        margin: 4px;
+        border: 1px solid transparent;
+        &.selected, &:is(:hover, :focus) {
+            background: var(--button-secondary-bg-hover);
+            border: 1px solid var(--border-color)
+        }
+        &.cancel {
+            background: #4f4b4b;
+        }
+    }
+}

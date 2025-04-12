@@ -1,0 +1,12 @@
+.coinWidgetList {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    gap: 4px;
+    &.hideChart {
+        flex-direction: column;
+        overflow-x: unset;
+        overflow-y: scroll;
+        max-height: 500px;
+    }
+}

@@ -1,0 +1,22 @@
+.coinDetails {
+    display: flex;
+    flex-direction: column;
+    & + div {
+        width: 100%;
+    }
+}
+
+.cardContainer {
+    .badge {
+        margin-top: 4px;
+    }
+    
+    & > div:first-child {
+        display: flex;
+        align-items: start;
+    }
+}
+
+.coinListContainer {
+    margin-top: 24px;
+}

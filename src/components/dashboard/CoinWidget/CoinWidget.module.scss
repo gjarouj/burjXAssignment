@@ -1,0 +1,21 @@
+.coinWidget {
+    display: flex;
+    flex-direction: column;
+    .graphContainer {
+        width: 190px;
+        height: 90px;
+    }
+    .coinPriceContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &.hideChart {
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+        .coinPriceContainer {
+            flex-direction: column;
+        }
+    }
+}

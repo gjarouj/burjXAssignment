@@ -1,0 +1,15 @@
+.badge {
+    background: #FFFFFF0D;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    &.textRed {
+        color: var(--burjx-red);
+    }
+    
+    &.textGreen {
+        color: var(--burjx-green);
+    }
+}
