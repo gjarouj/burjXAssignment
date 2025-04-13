@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import React, { useEffect, useRef, useState } from "react";
-import { Button } from "@/components/core/Button/Button";
-import styles from "./DualSwitch.module.scss";
-import { DualSwitchProps } from "./DualSwitch.types";
+import React, { useEffect, useRef, useState } from 'react';
+import { Button } from '@/components/core/Button/Button';
+import styles from './DualSwitch.module.scss';
+import { DualSwitchProps } from './DualSwitch.types';
 
 export const DualSwitch: React.FC<DualSwitchProps> = ({
   options,
   default: defaultOption,
   onChange,
-  label = "Toggle option",
-  className = "",
+  label = 'Toggle option',
+  className = '',
 }) => {
   const optionRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const [selected, setSelected] = useState(defaultOption);
@@ -31,9 +31,9 @@ export const DualSwitch: React.FC<DualSwitchProps> = ({
     const currentIndex = options.findIndex((option) => option.label === selected.label);
     const current = currentIndex === -1 ? 0 : currentIndex;
 
-    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
       e.preventDefault();
-      const direction = e.key === "ArrowRight" ? 1 : -1;
+      const direction = e.key === 'ArrowRight' ? 1 : -1;
       const nextIndex = (current + direction + options.length) % options.length;
       updateSelection(options[nextIndex]);
     }

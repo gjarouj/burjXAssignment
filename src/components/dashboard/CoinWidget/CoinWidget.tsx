@@ -19,7 +19,12 @@ export const CoinWidget: React.FC<CoinWidgetProps> = ({
 }) => {
 
   return (
-    <Card onClick={onClick} width={hideChart ? '-webkit-fill-available' : '230px'}>
+    <Card  onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onClick();
+      }
+    }} tabIndex={hideChart ? 0 : -1} onClick={onClick} width={hideChart ? '-webkit-fill-available' : '230px'} role="list-item">
       <div className={`${styles.coinWidget} ${hideChart ? styles.hideChart : ""}`}>
         <CoinAvatar name={name} imgUrl={image} symbol={symbol} />
         {!hideChart && (

@@ -1,0 +1,53 @@
+.predictiveSearch {
+    position: relative;
+    width: 100%;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 12px;
+        top: 16px;
+        background-image: url('/icons/22px/icon-search.svg');
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+        pointer-events: none;
+      }
+
+      .input {
+        background: #FFFFFF0D;
+        height: 48px;
+        border-radius: 24px;
+        color: white;
+        padding: 0 16px 0 56px;
+        max-width: -webkit-fill-available;
+        border: none;
+        width: 100%;
+        margin-bottom: 24px;
+        &::placeholder {
+            color: var(--font-secondary);
+            font-size: 16px;
+        }
+    }
+    .results {
+        position: absolute;
+        top: 36px;
+        width: 100%;
+        background-color: black;
+        border: 1px solid var(--border-color);
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+        padding: 16px 0;
+        max-height: 100px;
+        overflow: scroll;
+        li {
+            list-style: none;
+            cursor: pointer;
+            padding: 4px;
+            color: var(--font-secondary);
+            &:hover {
+                color: var(--font-primary);
+            }
+        }
+    }
+}

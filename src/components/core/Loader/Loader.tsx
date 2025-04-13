@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "./Loader.module.scss";
-import { LoaderProps } from "./Loader.types";
+import React from 'react';
+import styles from './Loader.module.scss';
+import { LoaderProps } from './Loader.types';
 
 export const Loader: React.FC<LoaderProps> = ({
     type = 'page',

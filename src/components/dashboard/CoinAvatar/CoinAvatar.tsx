@@ -9,7 +9,7 @@ export const CoinAvatar: React.FC<CoinAvatarProps> = ({
     symbol
 }) => {
     return (<div className={styles.coinAvatarContainer}>
-            <Image src={imgUrl}
+            <Image aria-hidden="true" src={imgUrl}
                     alt={name}
                     width={40}
                     height={40}/>

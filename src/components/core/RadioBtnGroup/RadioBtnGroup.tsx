@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import React, { useEffect, useRef, useState } from "react";
-import { Button } from "@/components/core/Button/Button";
-import { RadioBtnGroupProps } from "./RadioBtnGroup.types";
+import React, { useEffect, useRef, useState } from 'react';
+import { Button } from '@/components/core/Button/Button';
+import { RadioBtnGroupProps } from './RadioBtnGroup.types';
 
 export const RadioBtnGroup: React.FC<RadioBtnGroupProps> = ({
   options,
   default: defaultOption,
   onChange,
   className,
-  label = "Toggle option",
+  label = 'Toggle option',
 }) => {
   const optionRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const [selected, setSelected] = useState(defaultOption);
@@ -30,9 +30,9 @@ export const RadioBtnGroup: React.FC<RadioBtnGroupProps> = ({
     const currentIndex = options.findIndex((option) => option.label === selected.label);
     const current = currentIndex === -1 ? 0 : currentIndex;
 
-    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
       e.preventDefault();
-      const direction = e.key === "ArrowRight" ? 1 : -1;
+      const direction = e.key === 'ArrowRight' ? 1 : -1;
       const nextIndex = (current + direction + options.length) % options.length;
       updateSelection(options[nextIndex]);
     }

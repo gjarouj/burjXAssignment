@@ -1,22 +1,22 @@
-"use client";
+'use client';
 
-import { useRouter } from "next/navigation"; // at the top of your file
-import Image from "next/image";
-import styles from "./page.module.scss";
-import { Tabs } from "@/components/core/Tabs/Tabs";
-import { TabPanel } from "@/components/core/Tabs/TabPanel";
-import { Tab } from "@/components/core/Tabs/Tab";
-import { CoinWidgetList } from "@/components/dashboard/CoinWidgetList/CoinWidgetList";
-import { useEffect, useRef, useState } from "react";
-import { CoinWidgetProps } from "@/components/dashboard/CoinWidget/CoinWidget.types";
-import { Table } from "@/components/core/Table/Table";
-import { CoinAvatar } from "@/components/dashboard/CoinAvatar/CoinAvatar";
-import { Badge } from "@/components/core/Badge/Badge";
-import { Button } from "@/components/core/Button/Button";
-import { formatNumberCompact } from "@/utils/formatNumberCompact";
-import { Chart } from "@/components/core/Chart/Chart";
-import Link from "next/link";
-import { Loader } from "@/components/core/Loader/Loader";
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import styles from './page.module.scss';
+import { Tabs } from '@/components/core/Tabs/Tabs';
+import { TabPanel } from '@/components/core/Tabs/TabPanel';
+import { Tab } from '@/components/core/Tabs/Tab';
+import { CoinWidgetList } from '@/components/dashboard/CoinWidgetList/CoinWidgetList';
+import { useEffect, useRef, useState } from 'react';
+import { CoinWidgetProps } from '@/components/dashboard/CoinWidget/CoinWidget.types';
+import { Table } from '@/components/core/Table/Table';
+import { CoinAvatar } from '@/components/dashboard/CoinAvatar/CoinAvatar';
+import { Badge } from '@/components/core/Badge/Badge';
+import { Button } from '@/components/core/Button/Button';
+import { formatNumberCompact } from '@/utils/formatNumberCompact';
+import { Chart } from '@/components/core/Chart/Chart';
+import Link from 'next/link';
+import { Loader } from '@/components/core/Loader/Loader';
 
 const pageSize = 20;
 const REFRESH_INTERVAL = 30000;
@@ -41,7 +41,7 @@ export default function Home() {
         setWidgetCoins(data.data);
         setLoading(false)
       } catch (error) {
-        console.error("Failed to fetch widget coins:", error);
+        console.error('Failed to fetch widget coins', error);
       }
     };
 
@@ -61,7 +61,6 @@ export default function Home() {
         `https://coingeko.burjx.com/coin-prices-all?currency=usd&page=${currentPage}&pageSize=${pageSize}`
       );
       const data = await res.json();
-      console.log("Fetched Page:", currentPage, "Received Items:", data.data.length);
   
       setTableCoins((prev) => {
         const newCoins = [...prev, ...data.data];
@@ -72,7 +71,7 @@ export default function Home() {
         return newCoins;
       });
     } catch (error) {
-      console.error("Failed to load table coins:", error);
+      console.error('Failed to load table coins:', error);
     } finally {
       setLoading(false);
       setTableLoading(false);
@@ -99,7 +98,7 @@ export default function Home() {
       },
       {
         root: null,
-        rootMargin: "40px",
+        rootMargin: '40px',
         threshold: 1.0,
       }
     );

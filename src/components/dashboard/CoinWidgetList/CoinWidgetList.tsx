@@ -24,9 +24,9 @@ export const CoinWidgetList: React.FC<CoinWidgetListProps> = ({
     }
 
     return (
-        <div className={`${styles.coinWidgetList}${hideChart ? ` ${styles.hideChart}` : ""}`}>
+        <div role="list" className={`${styles.coinWidgetList}${hideChart ? ` ${styles.hideChart}` : ""}`}>
             {coins.map((coin, index) => (  
-                <CoinWidget
+                <CoinWidget 
                     onClick={() => widgetClicked(coin)}
                     key={`Widget-${id}-${coin.id}-${index}`}
                     productId={coin.productId}

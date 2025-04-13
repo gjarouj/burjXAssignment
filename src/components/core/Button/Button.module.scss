@@ -5,7 +5,7 @@
     --button-secondary-bg: var(--card-bg);
     --button-secondary-bg-hover: #2B2B2B80;
 
-    --button-tertiary-color: var(--burjx-grey);
+    --button-tertiary-color: var(--font-secondary);
     --button-tertiary-color-hover: black;
     --button-tertiary-bg: transparent;
     --button-tertiary-bg-hover: var(--burjx-green);
@@ -15,6 +15,7 @@
     padding: 0;
     margin: 8px;
     border-radius: 24px;
+
     .icon:first-child:not(:only-child) {
         margin-right: 12px;
     }

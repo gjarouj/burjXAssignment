@@ -5,14 +5,13 @@ import { useMemo } from 'react';
 import type { ApexOptions } from 'apexcharts';
 import { CandleData, ChartProps } from './Chart.types';
 
-// Lazy-load ApexCharts to avoid SSR issues
 const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 export const Chart: React.FC<ChartProps> = ({ type, data, color }) => {
   const { options, series, height } = useMemo(() => {
     let chartSeries;
     let chartOptions: ApexOptions;
-    let chartHeight = 100; // default height for line charts with candle-format
+    let chartHeight = 100;
 
     const isCandleFormat = type === 'line' && typeof data[0] === 'object' && 'usd' in data[0];
 

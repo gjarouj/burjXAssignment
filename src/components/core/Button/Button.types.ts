@@ -1,5 +1,5 @@
 export type ButtonProps = {
-    type: "primary" | "secondary" | "tertiary" | "icon",
+    type: 'primary' | 'secondary' | 'tertiary' | 'icon',
     onClick?: () => void,
     onBlur?: () => void,
     label?: string,
@@ -9,7 +9,7 @@ export type ButtonProps = {
         url: string,
         width: number,
         height: number,
-        position?: "left" | "right"
+        position?: 'left' | 'right'
     },
     ariaLabel?: string,
     role?: string,

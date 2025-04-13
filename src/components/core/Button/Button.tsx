@@ -1,9 +1,8 @@
-"use client";
-import React, { forwardRef } from "react";
-import styles from "./Button.module.scss";
-import { ButtonProps } from "./Button.types";
+'use client';
+import React, { forwardRef } from 'react';
+import styles from './Button.module.scss';
+import { ButtonProps } from './Button.types';
 
-// Forward the ref to the <button> element
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
@@ -74,5 +73,4 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-// Optional: for better DX (debugging), name the component
 Button.displayName = "Button";

@@ -4,7 +4,7 @@ export type SwitchBtnOptions = {
         url: string,
         width: number,
         height: number,
-        position?: "left" | "right"
+        position?: 'left' | 'right'
     }
 }
 

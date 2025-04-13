@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "./Table.module.scss";
-import { TableProps } from "./Table.types";
-import { Tooltip } from "../Tooltip/Tooltip";
-import { Loader } from "../Loader/Loader";
+import React from 'react';
+import styles from './Table.module.scss';
+import { TableProps } from './Table.types';
+import { Tooltip } from '@/components/core/Tooltip/Tooltip';
+import { Loader } from '@/components/core/Loader/Loader';
 
 export const Table: React.FC<TableProps> = ({
     loading,
